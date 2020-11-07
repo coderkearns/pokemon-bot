@@ -1,3 +1,5 @@
+from os import listdir as ls
+
 import discord
 from discord.ext import commands
 

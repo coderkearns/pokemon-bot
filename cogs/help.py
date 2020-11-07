@@ -15,14 +15,14 @@ class HELP(commands.Cog):
 	help=f"""Commands
 	EX: {prefix}help
 	EX: {prefix}?
-	EX: {prefix}help <spell_name>
-	EX {prefix}? <spell_name>"""
+	EX: {prefix}help <command>
+	EX {prefix}? <command>"""
 	)
 	async def _help(self, ctx, *, cmd=""):
 		cmds = self.bot.commands
 		cmd = cmd.replace("\t", "").replace("\n", "")
 		if cmd == "":
-			message = "The spells in your spellbook are:\n"
+			message = "The Pokedex options are:\n"
 			if ctx.message.guild == None:
 				for command in cmds:
 					message += ctx.prefix + "**"+command.name+"**\t*"+command.help.split('\n')[0]+"*\n"
