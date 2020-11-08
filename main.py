@@ -8,11 +8,11 @@ from discord.ext import commands
 # Bot Setup #
 #############
 
-prefix = raise Exception("Replace this with the prefix")
+prefix = "."
 bot = commands.Bot(
 	command_prefix=commands.when_mentioned_or(prefix),
 	case_insensitive=True,
-	activity=discord.Game( raise Exception("Replace this with the status of the bot") )
+	activity=discord.Game("Pokémon | .help")
 	)
 bot.remove_command('help')
 
@@ -62,8 +62,8 @@ async def on_ready():
 from os import getenv
 TOKEN = getenv("TOKEN")
 
-# Keep the bot alive on Repl.it (see https://repl.it/talk/learn/Hosting-discordpy-bots-with-replit/11008)
-#from keep_alive import keep_alive
-#keep_alive()
+
+from keep_alive import keep_alive
+keep_alive()
 
 bot.run(TOKEN)

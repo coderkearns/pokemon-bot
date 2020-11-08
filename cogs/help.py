@@ -1,8 +1,8 @@
 from discord import Embed
 from discord.ext import commands
 
-prefix = raise Exception("Replace this with the bot prefix")
-embedcolor = 0x7289da
+prefix = "."
+embedcolor = 0xFFCB05
 
 
 class HELP(commands.Cog):
